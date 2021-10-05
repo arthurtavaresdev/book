@@ -1,0 +1,35 @@
+### GET
+GET http://localhost:8080/books
+
+### GET with invalid ID
+GET http://localhost:8080/books/1
+
+### POST new Book
+POST http://localhost:8080/books
+Content-Type: application/json
+
+{
+  "title":"Eloquent JavaScript, Third Edition",
+  "author":"Marijn Haverbeke",
+  "published_at":"2018-12-04",
+  "publisher":"No Starch Press",
+  "status": "available"
+}
+
+### GET with ID
+GET http://localhost:8080/books/615ba18df9206d5abf261004
+
+### PUT update Book
+PUT http://localhost:8080/books/615ba18df9206d5abf261004
+Content-Type: application/json
+
+{
+  "title":"Practical Modern JavaScript",
+  "author":"Nicolás Bevacqua",
+  "published_at":"2017-07-16T00:00:00.000Z",
+  "publisher":"O'Reilly Media",
+  "status": "blocked"
+}
+
+### DELETE
+DELETE http://localhost:8080/users/615ba18df9206d5abf261004
